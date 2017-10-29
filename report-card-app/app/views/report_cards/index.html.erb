@@ -1,0 +1,10 @@
+<h1>Report Card Records</h1>
+
+
+<% @report_cards.each do |report_card| %>
+    <% if report_card["elementary_or_high_school"] == "HS" %>
+      <h2><%= report_card["community_area_name"]%></h2>
+      <h3>College Enorllement: <%= report_card["college_enrollment_rate"] %></h3>
+      <h3>Freshman on Track: <%= report_card["freshman_on_track_rate"] %></h3>
+    <% end %>
+<% end %>

@@ -1,0 +1,32 @@
+<div id="app">
+  <h1>Add a Person:</h1>
+  <ul>
+    <li v-for="error in errors">{{ errors }}</li>
+  </ul>
+  <div>
+    Name: <input v-model="newPersonName">
+  </div>
+  <div>
+    Bio: <input v-model="newPersonBio">
+  </div>
+  <button v-on:click="addPerson()">Add Person</button>
+
+  <div v-for="person in people">
+    <h2 v-on:click="toggleBio(person)">{{ person.name }}</h2> 
+    <div v-if="person.bioVisible">
+      <h3>{{ person.bio }}</h3>
+      <h6 v-on:click="deletePerson(person)">delete</h6>
+    </div>
+  </div>
+
+  <h4>Total Number of People: {{ people.length }}</h4>
+</div>
+
+
+
+
+
+
+
+
+

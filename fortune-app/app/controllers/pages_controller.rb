@@ -23,11 +23,11 @@ class PagesController < ApplicationController
     end
     winning_numbers << rand(1..60)
     
-    render 'lotto_page.html.erb'
+    render "lotto_page.html.erb"
   end
 
   def count_action
     @count += 1 
-    render 'count_page.html.erb'
+    render "count_page.html.erb"
   end 
 end

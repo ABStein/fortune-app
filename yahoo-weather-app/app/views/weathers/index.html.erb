@@ -1,0 +1,21 @@
+<h1>Weather</h1>
+
+<form action="/weather" method="get">
+City: <input type="text" name="city">
+State: <input type="text" name="state">
+<input type="submit" value="Go">
+  
+</form>
+
+<h2>5 Day Forecast</h2>
+<% @forecasts.each do |forecast| %>
+  <h4><%= forecast["day"] %> - <%= forecast["date"] %></h4>
+    <ul>
+        <li>High: <%= forecast["high"] %></li>
+        <li>Low: <%= forecast["low"] %></li>
+        <li>Condition: <%= forecast["text"] %></li>
+    </ul>
+<% end %>
+
+
+

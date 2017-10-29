@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Hamilton Example</title>
+
+</head>
+<body>
+  <h1 ondblclick="toggleDetails()">Alexander Hamilton</h1>
+   <p>Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation’s financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p>
+
+   <button onclick="redHeader()">Click</button>
+ <script>
+    function toggleDetails() {
+      var ptag = document.querySelector('p');
+      if (ptag.style.display === "none"){
+        ptag.style.display = "block";
+
+      } else {
+        ptag.style.display = "none";
+      }
+    }
+
+    function redHeader() {
+      var htag = document.querySelector('h1');
+      var colorCode = "#";
+      var characters = ["0", "1", "2", "3", "4", "5", "6", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" ];
+      for(var i = 0; i < 6; i++){
+        var randomNumber = Math.floor(Math.random() * 16);
+        colorCode += characters[randomNumber];
+      }
+
+
+    }
+
+
+
+ </script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+ .here {
+    color: green;
+     text-decoration: line-through;
+  }
+
+  .hidden{
+    display: none;
+
+
+  }
+
+
+</style>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <p class="here">Jacque</p>
+  <p>Luke</p>
+  <p>Neil</p>
+  <p>Adam</p>
+  <p>Jesus</p>
+  <p>Alex</p>
+  <p>Dhiraj</p>
+  <p>Andrew</p>
+  <p>Sam</p>
+  <p>Nathan</p>
+  <p>Rocio</p>
+  <p>Victor</p>
+  <p>Elia</p>
+  <p>Cyrus</p>
+  <p>Austin</p>
+  <p>Mitch</p>
+
+<button onclick="hideAttended()">Hide Attended Students</button>
+
+  <script>
+    function hideAttended(ptag) {
+      // var ptags = document.querySelectorAll("p.here");
+      // for(let ptag of ptags)
+      ptag.classList.toggle("here"); 
+      }
+    }
+
+  </script>
+</body>
+
+
+</html>
